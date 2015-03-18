@@ -1,0 +1,39 @@
+{
+  "name": "generator-modern-webapp",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "liamcurry/generator-modern-webapp",
+  "author": {
+    "name": "Liam Curry",
+    "email": "liam@curry.name",
+    "url": "https://github.com/liamcurry"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^0.5.0",
+    "git-config": "0.0.6",
+    "lodash": "^3.1.0",
+    "npm-name": "^1.0.3",
+    "yeoman-generator": "^0.18.0",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
