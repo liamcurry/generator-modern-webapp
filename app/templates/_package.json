@@ -45,6 +45,7 @@
 		"gulp-uglify": "*",
 		"gulp-util": "*",
 		"gulp-zopfli": "*",
+		"gulp-gh-pages": "*",
 		"jshint-stylish": "*",
 		"live-server": "*",
 		"svgo": "*"

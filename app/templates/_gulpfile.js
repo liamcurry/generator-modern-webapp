@@ -133,3 +133,8 @@ gulp.task('watch', ['build'], function() {
 	liveServer.start(8181, 'dist', false)
 	gulp.watch('src/**/*.*', ['build'])
 })
+
+gulp.task('deploy', ['build'], function () {
+	return gulp.src('dist/**/*')
+		.pipe($.ghPages())
+})
