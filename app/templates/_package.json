@@ -37,6 +37,7 @@
 		"gulp-mocha": "*",
 		"gulp-myth": "*",
 		"gulp-notify": "*",
+		"gulp-parker": "*",
 		"gulp-plumber": "*",
 		"gulp-rename": "*",
 		"gulp-size": "*",

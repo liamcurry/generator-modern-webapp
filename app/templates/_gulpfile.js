@@ -118,7 +118,6 @@ gulp.task('manifest', ['gz', 'copy'], function() {
 		.pipe(gulp.dest('dist'))
 })
 
-
 gulp.task('size', ['manifest'], function() {
 	return gulp.src([
 		'dist/*.@(js|css|html).gz',
@@ -128,7 +127,12 @@ gulp.task('size', ['manifest'], function() {
 		.pipe($.size())
 })
 
-gulp.task('build', ['size'])
+gulp.task('parker', function () {
+	return gulp.src('dist/*.css')
+		.pipe($.parker())
+})
+
+gulp.task('build', ['size', 'parker'])
 gulp.task('default', ['build'])
 gulp.task('test', ['js:test'])
 gulp.task('watch', ['build'], function() {
