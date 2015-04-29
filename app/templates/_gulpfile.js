@@ -1,5 +1,7 @@
 var gulp = require('gulp')
 var $ = require('gulp-load-plugins')()
+var browserSync = require('browser-sync')
+var reload = browserSync.reload
 
 function plumber() {
 	return $.plumber({
@@ -90,6 +92,7 @@ gulp.task('gz', ['html', 'css', 'js'], function () {
 		.pipe(plumber())
 		.pipe($.zopfli())
 		.pipe(gulp.dest('dist'))
+		.pipe(reload({stream: true}))
 })
 
 gulp.task('copy', function() {
@@ -129,9 +132,11 @@ gulp.task('build', ['size'])
 gulp.task('default', ['build'])
 gulp.task('test', ['js:test'])
 gulp.task('watch', ['build'], function() {
-	var liveServer = require('live-server')
-	liveServer.start(8181, 'dist', false)
+	browserSync({
+		server: './dist'
+	})
 	gulp.watch('src/**/*.*', ['build'])
+		.on('change', reload)
 })
 
 gulp.task('deploy', ['build'], function () {
