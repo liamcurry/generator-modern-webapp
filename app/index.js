@@ -66,6 +66,7 @@ module.exports = yeoman.generators.Base.extend({
 			this.template('_package.json', 'package.json')
 			this.template('_bower.json', 'bower.json')
 			this.template('_gulpfile.js', 'gulpfile.js')
+			this.template('_config.js', 'config.js')
 			this.template('_README.md', 'README.md')
 			this.template('_gulpfile.js', 'gulpfile.js')
 			this.template('_travis.yml', '.travis.yml')
